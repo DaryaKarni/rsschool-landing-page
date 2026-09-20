@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import './variables.scss';
+html{
+  scroll-behavior: smooth;
+}
 body{
   display: flex;
   flex-direction: column;
@@ -68,15 +71,37 @@ body{
         justify-content: center;
       }
       &-light{
-        background-color: var(--text-accent);
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        &.active{
+          background-color: var(--text-accent);
+        }
+        &:hover{
+          background-color: var(--text-accent);
+        }
+      }
+      &-dark{
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        &.active{
+          background-color: var(--border-inverse);
+        }
+        &:hover{
+          background-color: var(--border-inverse);
+        }
       }
     }
     .coffee-menu{
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      border-bottom: 0.16rem solid transparent;
+      transition: border-color 0.3s ease;
       &-icon{
         margin-bottom: 3px;
+      }
+      &:hover{
+        border-color: var(--text-primary);;
       }
     }
   }
@@ -111,7 +136,7 @@ body{
           color: var(--text-accent);
         }
       }
-      .button-menu{
+      .button-menu-wrapper{
         width: 3rem;
         padding: 1.25rem 4.88rem 1.25rem 4.88rem;
         border-radius: 6.25rem;
@@ -119,8 +144,25 @@ body{
         background-color: var(--background-page);
         display: flex;
         justify-content: center;
+        gap: 0.3rem;
+        .button-menu{
+          position: relative;
+          left: 0.5rem;
         *{
           color: var(--text-primary);
+        }
+        }
+        .coffee-menu-icon{
+          opacity: 0;
+          flex-shrink: 0;
+          position: relative;
+          left: 0.5rem;
+          transition: opacity 0.3s ease;
+        }
+        &:hover{
+          .coffee-menu-icon{
+          opacity: 1;
+        }
         }
       }
     }
@@ -159,6 +201,12 @@ body{
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 0.3s ease;
+          background-color: transparent;
+          &:hover{
+            background-color: var(--background-container);
+            color: var(--text-inverse);
+          }
         }
         .row-slider{
           display: flex;
@@ -277,10 +325,15 @@ body{
           border-radius: 6.25rem;
           align-items: center;
           width: 10.5rem;
+          transition: all 0.3s ease;
           .text-block{
             display: flex;
             flex-direction: column;
             gap: 3px;
+          }
+          &:hover{
+            background-color: var(--background-container);
+            color: var(--text-inverse);
           }
         }
       }
@@ -328,6 +381,7 @@ body{
           border-radius: 6.25rem;
           padding: 0.5rem 1rem 0.5rem 0.5rem;
           justify-content: center;
+          transition: all 0.3s ease;
           .icon-frame{
             width: 1.9rem;
             height: 1.9rem;
@@ -341,7 +395,7 @@ body{
           p{
             color: var(--text-primary);
           }
-          &.active{
+          &.active, &:hover{
             background-color: var(--background-container);
             color: var(--text-inverse);
             .icon-frame{
@@ -351,6 +405,7 @@ body{
               color: var(--text-inverse);
             }
           }
+
         }
       }
     }
@@ -388,8 +443,7 @@ body{
   gap: 6.25rem;
   padding: 6.25rem;
   height: 28.13rem;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center;  
   .offer{
     display: flex;
     flex-direction: column;
@@ -412,15 +466,19 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        .socials-icon{
-
+        color: var(--border-primary);
+        transition: all 0.3s ease;
+        &:hover{
+          border-color: var(--text-primary);
+          background-color: var(--background-page);
+          color: var(--text-primary);
         }
     }
     }
   }
   .contacts-info{
     display: flex;
-    flex: 1;
+    justify-content: left;
     flex-direction: column;
     gap: 2.5rem;
     .contacts-text{
@@ -434,6 +492,12 @@ body{
         display: flex;
         gap: 0.5rem;
         color: var(--text-inverse);
+        border-bottom: 0.13rem solid transparent;
+        transition: all 0.3s ease;
+
+        &:hover{
+          border-color: var(--text-inverse);
+        }
       }
     }
   }

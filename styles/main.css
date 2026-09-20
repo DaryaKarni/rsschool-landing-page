@@ -100,6 +100,10 @@ p, span, h1, h2, h3 {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -172,15 +176,37 @@ body {
   justify-content: center;
 }
 .header .header-actions .theme-switch-light {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.header .header-actions .theme-switch-light.active {
   background-color: var(--text-accent);
+}
+.header .header-actions .theme-switch-light:hover {
+  background-color: var(--text-accent);
+}
+.header .header-actions .theme-switch-dark {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.header .header-actions .theme-switch-dark.active {
+  background-color: var(--border-inverse);
+}
+.header .header-actions .theme-switch-dark:hover {
+  background-color: var(--border-inverse);
 }
 .header .header-actions .coffee-menu {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  border-bottom: 0.16rem solid transparent;
+  transition: border-color 0.3s ease;
 }
 .header .header-actions .coffee-menu-icon {
   margin-bottom: 3px;
+}
+.header .header-actions .coffee-menu:hover {
+  border-color: var(--text-primary);
 }
 
 .main-home {
@@ -215,7 +241,7 @@ body {
 .main-home #hero .hero-offer .hero-text .accent {
   color: var(--text-accent);
 }
-.main-home #hero .hero-offer .button-menu {
+.main-home #hero .hero-offer .button-menu-wrapper {
   width: 3rem;
   padding: 1.25rem 4.88rem 1.25rem 4.88rem;
   border-radius: 6.25rem;
@@ -223,9 +249,24 @@ body {
   background-color: var(--background-page);
   display: flex;
   justify-content: center;
+  gap: 0.3rem;
 }
-.main-home #hero .hero-offer .button-menu * {
+.main-home #hero .hero-offer .button-menu-wrapper .button-menu {
+  position: relative;
+  left: 0.5rem;
+}
+.main-home #hero .hero-offer .button-menu-wrapper .button-menu * {
   color: var(--text-primary);
+}
+.main-home #hero .hero-offer .button-menu-wrapper .coffee-menu-icon {
+  opacity: 0;
+  flex-shrink: 0;
+  position: relative;
+  left: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+.main-home #hero .hero-offer .button-menu-wrapper:hover .coffee-menu-icon {
+  opacity: 1;
 }
 .main-home #favorite {
   display: flex;
@@ -262,6 +303,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+.main-home #favorite .slider-wrapper .slider .slider-button:hover {
+  background-color: var(--background-container);
+  color: var(--text-inverse);
 }
 .main-home #favorite .slider-wrapper .slider .row-slider {
   display: flex;
@@ -380,11 +427,16 @@ body {
   border-radius: 6.25rem;
   align-items: center;
   width: 10.5rem;
+  transition: all 0.3s ease;
 }
 .main-home #mobile .mobile-offer .mobile-buttons .mobile-button .text-block {
   display: flex;
   flex-direction: column;
   gap: 3px;
+}
+.main-home #mobile .mobile-offer .mobile-buttons .mobile-button:hover {
+  background-color: var(--background-container);
+  color: var(--text-inverse);
 }
 .main-home #mobile .img-wrapper {
   justify-content: flex-end;
@@ -431,6 +483,7 @@ body {
   border-radius: 6.25rem;
   padding: 0.5rem 1rem 0.5rem 0.5rem;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 .main-menu .menu .menu-offer .menu-tabs .tab-item .icon-frame {
   width: 1.9rem;
@@ -445,14 +498,14 @@ body {
 .main-menu .menu .menu-offer .menu-tabs .tab-item p {
   color: var(--text-primary);
 }
-.main-menu .menu .menu-offer .menu-tabs .tab-item.active {
+.main-menu .menu .menu-offer .menu-tabs .tab-item.active, .main-menu .menu .menu-offer .menu-tabs .tab-item:hover {
   background-color: var(--background-container);
   color: var(--text-inverse);
 }
-.main-menu .menu .menu-offer .menu-tabs .tab-item.active .icon-frame {
+.main-menu .menu .menu-offer .menu-tabs .tab-item.active .icon-frame, .main-menu .menu .menu-offer .menu-tabs .tab-item:hover .icon-frame {
   background-color: var(--background-page);
 }
-.main-menu .menu .menu-offer .menu-tabs .tab-item.active p {
+.main-menu .menu .menu-offer .menu-tabs .tab-item.active p, .main-menu .menu .menu-offer .menu-tabs .tab-item:hover p {
   color: var(--text-inverse);
 }
 .main-menu .menu .menu-grid {
@@ -489,7 +542,6 @@ body {
   padding: 6.25rem;
   height: 28.13rem;
   align-items: center;
-  justify-content: space-between;
 }
 .footer .offer {
   display: flex;
@@ -515,10 +567,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--border-primary);
+  transition: all 0.3s ease;
+}
+.footer .offer .footer-socials .socials-frame:hover {
+  border-color: var(--text-primary);
+  background-color: var(--background-page);
+  color: var(--text-primary);
 }
 .footer .contacts-info {
   display: flex;
-  flex: 1;
+  justify-content: left;
   flex-direction: column;
   gap: 2.5rem;
 }
@@ -534,4 +593,9 @@ body {
   display: flex;
   gap: 0.5rem;
   color: var(--text-inverse);
+  border-bottom: 0.13rem solid transparent;
+  transition: all 0.3s ease;
+}
+.footer .contacts-info .contacts-container .contact-line:hover {
+  border-color: var(--text-inverse);
 }/*# sourceMappingURL=main.css.map */
