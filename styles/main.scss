@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import './variables.scss';
-
 body{
   display: flex;
   flex-direction: column;
@@ -83,7 +82,7 @@ body{
   }
 }
 
-main{
+.main-home{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -299,6 +298,88 @@ main{
   }
 }
 
+.main-menu{
+  padding: 0 6.25rem 6.25rem 6.25rem;
+  .menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    .menu-offer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+      h1{
+        max-width: 50rem;
+        text-align: center;
+        color: var(--text-primary);
+        .accent{
+          color: var(--text-accent);
+        }
+      }
+      .menu-tabs{
+        display: flex;
+        gap: 1rem;
+        .tab-item{
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          border: 0.06rem solid var(--border-primary);
+          border-radius: 6.25rem;
+          padding: 0.5rem 1rem 0.5rem 0.5rem;
+          justify-content: center;
+          .icon-frame{
+            width: 1.9rem;
+            height: 1.9rem;
+            padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+            border-radius: 6.25rem;
+            background-color: var(--border-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          p{
+            color: var(--text-primary);
+          }
+          &.active{
+            background-color: var(--background-container);
+            color: var(--text-inverse);
+            .icon-frame{
+              background-color: var(--background-page);
+            }
+            p{
+              color: var(--text-inverse);
+            }
+          }
+        }
+      }
+    }
+    .menu-grid{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+      .card{
+        display: flex;
+        flex-direction: column;
+        border-radius: 2.5rem;
+        border: 0.06rem solid var(--border-primary);
+        h3,p{
+          color: var(--text-primary);
+        }
+        .card-image{
+          max-width: 19rem;
+          border-radius: 2.5rem;
+        }
+        .card-description{
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          padding: 1.25rem;
+        }
+      }
+    }
+  }
+}
 .footer{
   margin: 0 40px 40px 40px;
   background-color: var(--background-container);

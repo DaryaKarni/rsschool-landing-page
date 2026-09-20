@@ -183,14 +183,14 @@ body {
   margin-bottom: 3px;
 }
 
-main {
+.main-home {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 2.5rem 0 2.5rem;
   gap: 6.25rem;
 }
-main #hero {
+.main-home #hero {
   width: 100%;
   height: 40.25rem;
   border-radius: 2.5rem;
@@ -202,20 +202,20 @@ main #hero {
   display: flex;
   justify-content: space-between;
 }
-main #hero .hero-offer {
+.main-home #hero .hero-offer {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 2.5rem;
   max-width: 33rem;
 }
-main #hero .hero-offer .hero-text {
+.main-home #hero .hero-offer .hero-text {
   color: var(--text-inverse);
 }
-main #hero .hero-offer .hero-text .accent {
+.main-home #hero .hero-offer .hero-text .accent {
   color: var(--text-accent);
 }
-main #hero .hero-offer .button-menu {
+.main-home #hero .hero-offer .button-menu {
   width: 3rem;
   padding: 1.25rem 4.88rem 1.25rem 4.88rem;
   border-radius: 6.25rem;
@@ -224,10 +224,10 @@ main #hero .hero-offer .button-menu {
   display: flex;
   justify-content: center;
 }
-main #hero .hero-offer .button-menu * {
+.main-home #hero .hero-offer .button-menu * {
   color: var(--text-primary);
 }
-main #favorite {
+.main-home #favorite {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,23 +235,23 @@ main #favorite {
   color: var(--text-primary);
   width: 100%;
 }
-main #favorite h2 .accent {
+.main-home #favorite h2 .accent {
   color: var(--text-accent);
 }
-main #favorite .slider-wrapper {
+.main-home #favorite .slider-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 2.5rem;
   align-items: center;
 }
-main #favorite .slider-wrapper .slider {
+.main-home #favorite .slider-wrapper .slider {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main #favorite .slider-wrapper .slider .slider-button {
+.main-home #favorite .slider-wrapper .slider .slider-button {
   border: 0.06rem solid var(--border-inverse);
   color: var(--border-inverse);
   padding: 1.13rem;
@@ -263,17 +263,17 @@ main #favorite .slider-wrapper .slider .slider-button {
   align-items: center;
   justify-content: center;
 }
-main #favorite .slider-wrapper .slider .row-slider {
+.main-home #favorite .slider-wrapper .slider .row-slider {
   display: flex;
   width: 100%;
   overflow-x: hidden;
 }
-main #favorite .slider-wrapper .slider .row-slider .slide {
+.main-home #favorite .slider-wrapper .slider .row-slider .slide {
   display: flex;
   justify-content: center;
   min-width: 100%;
 }
-main #favorite .slider-wrapper .slider .row-slider .slide .slide-content {
+.main-home #favorite .slider-wrapper .slider .row-slider .slide .slide-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -281,11 +281,11 @@ main #favorite .slider-wrapper .slider .row-slider .slide .slide-content {
   width: 40rem;
   max-width: 30rem;
 }
-main #favorite .slider-wrapper .slider .row-slider .slide .slide-content img {
+.main-home #favorite .slider-wrapper .slider .row-slider .slide .slide-content img {
   max-width: 30rem;
   max-height: 30rem;
 }
-main #favorite .slider-wrapper .slider .row-slider .slide .slide-content .slide-description {
+.main-home #favorite .slider-wrapper .slider .row-slider .slide .slide-content .slide-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -294,60 +294,60 @@ main #favorite .slider-wrapper .slider .row-slider .slide .slide-content .slide-
   text-align: center;
   padding: 0 1rem 0 1rem;
 }
-main #favorite .slider-wrapper .controls {
+.main-home #favorite .slider-wrapper .controls {
   display: flex;
   gap: 0.75rem;
 }
-main #favorite .slider-wrapper .controls .control {
+.main-home #favorite .slider-wrapper .controls .control {
   width: 2.5rem;
   height: 0.25rem;
   background-color: var(--border-primary);
   border-radius: 6.25rem;
 }
-main #favorite .slider-wrapper .controls .control.active {
+.main-home #favorite .slider-wrapper .controls .control.active {
   background-color: var(--border-inverse);
 }
-main #about {
+.main-home #about {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
-main #about h2 {
+.main-home #about h2 {
   max-width: 85rem;
   color: var(--text-primary);
 }
-main #about h2 .accent {
+.main-home #about h2 .accent {
   color: var(--text-accent);
 }
-main #about .about-images {
+.main-home #about .about-images {
   display: flex;
   gap: 2.5rem;
   justify-content: space-between;
 }
-main #about .about-images .column {
+.main-home #about .about-images .column {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   width: 100%;
   flex: 1;
 }
-main #about .about-images .column .about-image {
+.main-home #about .about-images .column .about-image {
   width: 100%;
   border-radius: 1.25rem;
   overflow: hidden;
 }
-main #about .about-images .column .about-image img {
+.main-home #about .about-images .column .about-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-main #about .about-images .column .about-image.variant-1 {
+.main-home #about .about-images .column .about-image.variant-1 {
   max-height: 38rem;
 }
-main #about .about-images .column .about-image.variant-2 {
+.main-home #about .about-images .column .about-image.variant-2 {
   height: 26rem;
 }
-main #mobile {
+.main-home #mobile {
   width: 100%;
   display: flex;
   align-items: center;
@@ -355,24 +355,24 @@ main #mobile {
   justify-content: space-between;
   margin-bottom: 6.25rem;
 }
-main #mobile .mobile-offer {
+.main-home #mobile .mobile-offer {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   flex: 1;
   max-width: 39rem;
 }
-main #mobile .mobile-offer h2 {
+.main-home #mobile .mobile-offer h2 {
   color: var(--text-primary);
 }
-main #mobile .mobile-offer h2 .accent {
+.main-home #mobile .mobile-offer h2 .accent {
   color: var(--text-accent);
 }
-main #mobile .mobile-offer .mobile-buttons {
+.main-home #mobile .mobile-offer .mobile-buttons {
   display: flex;
   gap: 1.25rem;
 }
-main #mobile .mobile-offer .mobile-buttons .mobile-button {
+.main-home #mobile .mobile-offer .mobile-buttons .mobile-button {
   display: flex;
   padding: 0.88rem 1.25rem 0.88rem 1.25rem;
   gap: 0.5rem;
@@ -381,20 +381,103 @@ main #mobile .mobile-offer .mobile-buttons .mobile-button {
   align-items: center;
   width: 10.5rem;
 }
-main #mobile .mobile-offer .mobile-buttons .mobile-button .text-block {
+.main-home #mobile .mobile-offer .mobile-buttons .mobile-button .text-block {
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
-main #mobile .img-wrapper {
+.main-home #mobile .img-wrapper {
   justify-content: flex-end;
   flex: 1;
   max-width: 39rem;
   max-height: 39rem;
 }
-main #mobile .img-wrapper img {
+.main-home #mobile .img-wrapper img {
   width: 100%;
   object-fit: cover;
+}
+
+.main-menu {
+  padding: 0 6.25rem 6.25rem 6.25rem;
+}
+.main-menu .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.main-menu .menu .menu-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.main-menu .menu .menu-offer h1 {
+  max-width: 50rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+.main-menu .menu .menu-offer h1 .accent {
+  color: var(--text-accent);
+}
+.main-menu .menu .menu-offer .menu-tabs {
+  display: flex;
+  gap: 1rem;
+}
+.main-menu .menu .menu-offer .menu-tabs .tab-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border: 0.06rem solid var(--border-primary);
+  border-radius: 6.25rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  justify-content: center;
+}
+.main-menu .menu .menu-offer .menu-tabs .tab-item .icon-frame {
+  width: 1.9rem;
+  height: 1.9rem;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 6.25rem;
+  background-color: var(--border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-menu .menu .menu-offer .menu-tabs .tab-item p {
+  color: var(--text-primary);
+}
+.main-menu .menu .menu-offer .menu-tabs .tab-item.active {
+  background-color: var(--background-container);
+  color: var(--text-inverse);
+}
+.main-menu .menu .menu-offer .menu-tabs .tab-item.active .icon-frame {
+  background-color: var(--background-page);
+}
+.main-menu .menu .menu-offer .menu-tabs .tab-item.active p {
+  color: var(--text-inverse);
+}
+.main-menu .menu .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+.main-menu .menu .menu-grid .card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2.5rem;
+  border: 0.06rem solid var(--border-primary);
+}
+.main-menu .menu .menu-grid .card h3, .main-menu .menu .menu-grid .card p {
+  color: var(--text-primary);
+}
+.main-menu .menu .menu-grid .card .card-image {
+  max-width: 19rem;
+  border-radius: 2.5rem;
+}
+.main-menu .menu .menu-grid .card .card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
 }
 
 .footer {

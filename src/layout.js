@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </svg>
             </button>
           </div>
-          <a class="coffee-menu link" href="../../pages/menu/menu.html">
+          <a class="coffee-menu link" href="./menu.html">
             <p class="coffee-menu-text">Menu</p>
             <svg class="coffee-menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -113,3 +113,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.insertAdjacentElement('beforeend', footerWrapper);
   }
 });
+
