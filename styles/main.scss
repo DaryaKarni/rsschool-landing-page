@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import './variables.scss';
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--background-page);
+  width: 100%;
+  font-size: 16px;
+}
+*{
+  box-sizing: border-box;
+}
+.header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 60px 20px 60px;
+  gap: 1rem;
+  box-sizing: border-box;
+  .logo{
+    display: block;
+    max-width: 100px;
+    img{
+      width: 100%;
+      
+    }
+  }
+  .header-nav{
+    width: 100%;
+    .nav-list{
+      display: flex;
+      width: 100%;
+      list-style: none;
+      gap: 3rem;
+      padding: 0;
+      justify-content: center;
+      *{
+        white-space: nowrap;
+      }
+    }
+  }
+  .header-actions{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center ;
+    .theme-switch{
+      display: flex;
+      background-color: transparent;
+      border: 0.06rem solid var(--border-primary);
+      border-radius: 6.25rem;
+      width: 5.5rem;
+      height: 2.75rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 3px;
+      .switch-button{
+        border-radius: inherit;
+        width: 2.25rem;
+        height: 2.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &-light{
+        background-color: var(--text-accent);
+      }
+    }
+    .coffee-menu{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      &-icon{
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
+
+.footer{
+  margin: 0 40px 40px 40px;
+  background-color: var(--background-container);
+  border-radius: 2.5rem;
+  display: flex;
+  gap: 6.25rem;
+  padding: 6.25rem;
+  height: 28.13rem;
+  align-items: center;
+  justify-content: space-between;
+  .offer{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    .footer-text{
+      color: var(--text-inverse);
+      .accent{
+        color: var(--text-accent);
+      }
+    }
+    .footer-socials{
+      display: flex;
+      gap: 0.75rem;
+      .socials-frame{
+        border-radius: 6.25rem;
+        border: 1px solid var(--border-primary);
+        background-color: transparent;
+        width: 3.75rem;
+        height: 3.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .socials-icon{
+
+        }
+    }
+    }
+  }
+  .contacts-info{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2.5rem;
+    .contacts-text{
+      color: var(--text-inverse);
+    }
+    .contacts-container{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .contact-line{
+        display: flex;
+        gap: 0.5rem;
+        color: var(--text-inverse);
+      }
+    }
+  }
+}
+

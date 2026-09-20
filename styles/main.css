@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.heading-1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+}
+.heading-1.accent {
+  font-style: italic;
+}
+
+.heading-2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+}
+.heading-2.accent {
+  font-style: italic;
+}
+
+.heading-3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.medium {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.caption {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.link,
+.button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.burger-link {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+  text-decoration: none;
+}
+
+.mobile-heading-1 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 115%;
+}
+.mobile-heading-1.accent {
+  font-style: italic;
+}
+
+.mobile-heading-2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+}
+.mobile-heading-2.accent {
+  font-style: italic;
+}
+
+:root {
+  --text-primary: #403F3D;
+  --text-inverse: #E1D4C9;
+  --text-accent: #B0907A;
+  --background-page: #E1D4C9;
+  --background-container: #665F55;
+  --background-overlay: rgb(64, 63, 61, 0.8);
+  --border-primary: #C1B6AD;
+  --border-inverse: #665F55;
+}
+
+[data-theme=dark] {
+  --text-primary: #E1D4C9;
+  --text-inverse: #E1D4C9;
+  --text-accent: #B0907A;
+  --background-page: #292826;
+  --background-container: #403F3D;
+  --background-overlay: rgba(41, 40, 38, 0.8);
+  --border-primary: #665F55;
+  --border-inverse: #C1B6AD;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+p, span {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--background-page);
+  width: 100%;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 60px 20px 60px;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+.header .logo {
+  display: block;
+  max-width: 100px;
+}
+.header .logo img {
+  width: 100%;
+}
+.header .header-nav {
+  width: 100%;
+}
+.header .header-nav .nav-list {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  gap: 3rem;
+  padding: 0;
+  justify-content: center;
+}
+.header .header-nav .nav-list * {
+  white-space: nowrap;
+}
+.header .header-actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.header .header-actions .theme-switch {
+  display: flex;
+  background-color: transparent;
+  border: 0.06rem solid var(--border-primary);
+  border-radius: 6.25rem;
+  width: 5.5rem;
+  height: 2.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 3px;
+}
+.header .header-actions .theme-switch .switch-button {
+  border-radius: inherit;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .header-actions .theme-switch-light {
+  background-color: var(--text-accent);
+}
+.header .header-actions .coffee-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header .header-actions .coffee-menu-icon {
+  margin-bottom: 3px;
+}
+
+.footer {
+  margin: 0 40px 40px 40px;
+  background-color: var(--background-container);
+  border-radius: 2.5rem;
+  display: flex;
+  gap: 6.25rem;
+  padding: 6.25rem;
+  height: 28.13rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .offer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer .offer .footer-text {
+  color: var(--text-inverse);
+}
+.footer .offer .footer-text .accent {
+  color: var(--text-accent);
+}
+.footer .offer .footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+.footer .offer .footer-socials .socials-frame {
+  border-radius: 6.25rem;
+  border: 1px solid var(--border-primary);
+  background-color: transparent;
+  width: 3.75rem;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .contacts-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer .contacts-info .contacts-text {
+  color: var(--text-inverse);
+}
+.footer .contacts-info .contacts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .contacts-info .contacts-container .contact-line {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--text-inverse);
+}/*# sourceMappingURL=main.css.map */
