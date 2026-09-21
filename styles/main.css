@@ -465,8 +465,6 @@ body {
   align-items: center;
   min-width: 10.5rem;
   transition: all 0.3s ease;
-}
-.main-home #mobile .mobile-offer .mobile-buttons .mobile-button .icon {
   color: var(--text-primary);
 }
 .main-home #mobile .mobile-offer .mobile-buttons .mobile-button .text-block {
@@ -474,8 +472,14 @@ body {
   flex-direction: column;
   gap: 3px;
 }
+.main-home #mobile .mobile-offer .mobile-buttons .mobile-button .text-block .button {
+  transition: all 0.3s ease;
+}
 .main-home #mobile .mobile-offer .mobile-buttons .mobile-button:hover {
   background-color: var(--background-container);
+  color: var(--text-inverse);
+}
+.main-home #mobile .mobile-offer .mobile-buttons .mobile-button:hover .text-block .button {
   color: var(--text-inverse);
 }
 .main-home #mobile .img-wrapper {

@@ -361,17 +361,23 @@ body{
           align-items: center;
           min-width: 10.5rem;
           transition: all 0.3s ease;
-          .icon{
-            color: var(--text-primary);
-          }
+          color: var(--text-primary);
           .text-block{
             display: flex;
             flex-direction: column;
             gap: 3px;
+            .button{
+              transition: all 0.3s ease;
+            }
           }
           &:hover{
             background-color: var(--background-container);
             color: var(--text-inverse);
+            .text-block{
+              .button{
+                color: var(--text-inverse);
+              }
+            }
           }
         }
       }
