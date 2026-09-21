@@ -28,7 +28,6 @@ function loadChangeTheme(){
     lightButton.classList.toggle('active', theme === 'light');
     darkButton.classList.toggle('active', theme === 'dark');
   }
-  document.documentElement.classList.toggle('no-hover', 'ontouchstart' in window);
 
 }
 })

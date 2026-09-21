@@ -185,8 +185,10 @@ body {
 .header .header-actions .theme-switch .theme-switch-light.active {
   background-color: var(--text-accent);
 }
-.header .header-actions .theme-switch .theme-switch-light:hover {
-  background-color: var(--text-accent);
+@media (hover: hover) {
+  .header .header-actions .theme-switch .theme-switch-light:hover {
+    background-color: var(--text-accent);
+  }
 }
 .header .header-actions .theme-switch .theme-switch-dark {
   background-color: transparent;
@@ -195,8 +197,10 @@ body {
 .header .header-actions .theme-switch .theme-switch-dark.active {
   background-color: var(--text-accent);
 }
-.header .header-actions .theme-switch .theme-switch-dark:hover {
-  background-color: var(--border-inverse);
+@media (hover: hover) {
+  .header .header-actions .theme-switch .theme-switch-dark:hover {
+    background-color: var(--border-inverse);
+  }
 }
 .header .header-actions .coffee-menu {
   display: flex;
@@ -212,8 +216,10 @@ body {
   margin-bottom: 3px;
   color: var(--text-primary);
 }
-.header .header-actions .coffee-menu:hover {
-  border-color: var(--text-primary);
+@media (hover: hover) {
+  .header .header-actions .coffee-menu:hover {
+    border-color: var(--text-primary);
+  }
 }
 .header .header-actions .coffee-menu.active {
   border-bottom: 1px solid var(--text-primary);
@@ -293,8 +299,10 @@ body {
   left: 0.5rem;
   transition: opacity 0.3s ease;
 }
-.main-home #hero .hero-offer .button-menu-wrapper:hover .coffee-menu-icon {
-  opacity: 1;
+@media (hover: hover) {
+  .main-home #hero .hero-offer .button-menu-wrapper:hover .coffee-menu-icon {
+    opacity: 1;
+  }
 }
 .main-home #favorite {
   display: flex;
@@ -337,9 +345,11 @@ body {
   transition: all 0.3s ease;
   background-color: transparent;
 }
-.main-home #favorite .slider-wrapper .slider .slider-button:hover {
-  background-color: var(--background-container);
-  color: var(--text-inverse);
+@media (hover: hover) {
+  .main-home #favorite .slider-wrapper .slider .slider-button:hover {
+    background-color: var(--background-container);
+    color: var(--text-inverse);
+  }
 }
 .main-home #favorite .slider-wrapper .slider .row-slider {
   display: flex;
@@ -475,12 +485,14 @@ body {
 .main-home #mobile .mobile-offer .mobile-buttons .mobile-button .text-block .button {
   transition: all 0.3s ease;
 }
-.main-home #mobile .mobile-offer .mobile-buttons .mobile-button:hover {
-  background-color: var(--background-container);
-  color: var(--text-inverse);
-}
-.main-home #mobile .mobile-offer .mobile-buttons .mobile-button:hover .text-block .button {
-  color: var(--text-inverse);
+@media (hover: hover) {
+  .main-home #mobile .mobile-offer .mobile-buttons .mobile-button:hover {
+    background-color: var(--background-container);
+    color: var(--text-inverse);
+  }
+  .main-home #mobile .mobile-offer .mobile-buttons .mobile-button:hover .text-block .button {
+    color: var(--text-inverse);
+  }
 }
 .main-home #mobile .img-wrapper {
   flex: 1 1 60rem;
@@ -543,15 +555,27 @@ body {
 .main-menu .menu .menu-offer .menu-tabs .tab-item p {
   color: var(--text-primary);
 }
-.main-menu .menu .menu-offer .menu-tabs .tab-item.active, .main-menu .menu .menu-offer .menu-tabs .tab-item:hover {
+.main-menu .menu .menu-offer .menu-tabs .tab-item.active {
   background-color: var(--background-container);
   color: var(--text-inverse);
 }
-.main-menu .menu .menu-offer .menu-tabs .tab-item.active .icon-frame, .main-menu .menu .menu-offer .menu-tabs .tab-item:hover .icon-frame {
+.main-menu .menu .menu-offer .menu-tabs .tab-item.active .icon-frame {
   background-color: var(--background-page);
 }
-.main-menu .menu .menu-offer .menu-tabs .tab-item.active p, .main-menu .menu .menu-offer .menu-tabs .tab-item:hover p {
+.main-menu .menu .menu-offer .menu-tabs .tab-item.active p {
   color: var(--text-inverse);
+}
+@media (hover: hover) {
+  .main-menu .menu .menu-offer .menu-tabs .tab-item:hover {
+    background-color: var(--background-container);
+    color: var(--text-inverse);
+  }
+  .main-menu .menu .menu-offer .menu-tabs .tab-item:hover .icon-frame {
+    background-color: var(--background-page);
+  }
+  .main-menu .menu .menu-offer .menu-tabs .tab-item:hover p {
+    color: var(--text-inverse);
+  }
 }
 .main-menu .menu .menu-grid {
   display: grid;
@@ -579,8 +603,10 @@ body {
   gap: 0.75rem;
   padding: 1.25rem;
 }
-.main-menu .menu .menu-grid .card:hover {
-  cursor: pointer;
+@media (hover: hover) {
+  .main-menu .menu .menu-grid .card:hover {
+    cursor: pointer;
+  }
 }
 .main-menu .menu .round-button {
   border: 0.06rem solid var(--border-inverse);
@@ -640,10 +666,12 @@ body {
 .footer .offer .footer-socials .socials-frame.footer-link {
   color: var(--text-inverse);
 }
-.footer .offer .footer-socials .socials-frame:hover {
-  border-color: var(--text-primary);
-  background-color: var(--background-page);
-  color: var(--text-primary);
+@media (hover: hover) {
+  .footer .offer .footer-socials .socials-frame:hover {
+    border-color: var(--text-primary);
+    background-color: var(--background-page);
+    color: var(--text-primary);
+  }
 }
 .footer .contacts-info {
   display: flex;
@@ -669,8 +697,10 @@ body {
 .footer .contacts-info .contacts-container .contact-line .link.footer-link {
   color: var(--text-inverse);
 }
-.footer .contacts-info .contacts-container .contact-line:hover {
-  border-color: var(--text-inverse);
+@media (hover: hover) {
+  .footer .contacts-info .contacts-container .contact-line:hover {
+    border-color: var(--text-inverse);
+  }
 }
 
 .hidden {
