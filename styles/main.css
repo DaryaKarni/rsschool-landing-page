@@ -633,8 +633,8 @@ body {
   color: var(--border-primary);
   transition: all 0.3s ease;
 }
-.footer .offer .footer-socials .socials-frame .socials-icon {
-  color: var(--text-primary);
+.footer .offer .footer-socials .socials-frame.footer-link {
+  color: var(--text-inverse);
 }
 .footer .offer .footer-socials .socials-frame:hover {
   border-color: var(--text-primary);
@@ -661,6 +661,9 @@ body {
   color: var(--text-inverse);
   border-bottom: 0.13rem solid transparent;
   transition: all 0.3s ease;
+}
+.footer .contacts-info .contacts-container .contact-line .link.footer-link {
+  color: var(--text-inverse);
 }
 .footer .contacts-info .contacts-container .contact-line:hover {
   border-color: var(--text-inverse);

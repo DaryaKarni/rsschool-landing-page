@@ -530,8 +530,8 @@ body{
         justify-content: center;
         color: var(--border-primary);
         transition: all 0.3s ease;
-        .socials-icon{
-          color: var(--text-primary);
+        &.footer-link{
+          color: var(--text-inverse);
         }
         &:hover{
           border-color: var(--text-primary);
@@ -559,7 +559,12 @@ body{
         color: var(--text-inverse);
         border-bottom: 0.13rem solid transparent;
         transition: all 0.3s ease;
-
+        .link{
+          &.footer-link{
+          color: var(--text-inverse)
+        }
+        }
+        
         &:hover{
           border-color: var(--text-inverse);
         }
