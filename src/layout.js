@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const active = isMenuPage ? 'active' : '';
     headerWrapper.outerHTML = `
       <header class="header" id="header">
-        <a href="../index.html" class="logo">
-          <img class="logo-image" src="../assets/logo.svg" alt="logo image">
+        <a href="./index.html" class="logo">
+          <img class="logo-image" src="./assets/logo.svg" alt="logo image">
         </a>
         <nav class="header-nav">
           <ul class="nav-list">
