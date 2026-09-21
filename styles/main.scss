@@ -73,7 +73,7 @@ body{
         align-items: center;
         justify-content: center;
       }
-      &-light{
+      .theme-switch-light{
         background-color: transparent;
         transition: background-color 0.3s ease;
         &.active{
@@ -83,11 +83,11 @@ body{
           background-color: var(--text-accent);
         }
       }
-      &-dark{
+      .theme-switch-dark{
         background-color: transparent;
         transition: background-color 0.3s ease;
         &.active{
-          background-color: var(--border-inverse);
+          background-color: var(--text-accent);
         }
         &:hover{
           background-color: var(--border-inverse);
@@ -105,9 +105,13 @@ body{
       }
       &-icon{
         margin-bottom: 3px;
+        color: var(--text-primary);
       }
       &:hover{
         border-color: var(--text-primary);;
+      }
+      &.active{
+        border-bottom: 1px solid var(--text-primary);
       }
     }
     .burger-menu{
@@ -342,6 +346,9 @@ body{
           color: var(--text-accent);
         }
       }
+      p{
+        color: var(--text-primary);
+      }
       .mobile-buttons{
         display: flex;
         gap: 1.25rem;
@@ -354,6 +361,9 @@ body{
           align-items: center;
           min-width: 10.5rem;
           transition: all 0.3s ease;
+          .icon{
+            color: var(--text-primary);
+          }
           .text-block{
             display: flex;
             flex-direction: column;
@@ -442,7 +452,8 @@ body{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2.5rem;
-      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
       flex-wrap: wrap;
       .card{
         display: flex;
@@ -519,6 +530,9 @@ body{
         justify-content: center;
         color: var(--border-primary);
         transition: all 0.3s ease;
+        .socials-icon{
+          color: var(--text-primary);
+        }
         &:hover{
           border-color: var(--text-primary);
           background-color: var(--background-page);
@@ -738,6 +752,15 @@ body{
     #mobile{
       flex-wrap: wrap;
       text-wrap: wrap;
+    }
+  }
+  .main-menu{
+    .menu{
+      .menu-offer{
+        .menu-tabs{
+          gap: 0.4rem;
+        }
+      }
     }
   }
   .footer{
