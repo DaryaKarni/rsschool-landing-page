@@ -20,7 +20,7 @@ function loadChangeTheme(){
   document.documentElement.dataset.theme = theme;
   const logo = document.querySelector('.logo-image');
   if(logo){
-    logo.src = theme === 'dark' ? '../assets/logo-dark.svg' : '../assets/logo.svg';
+    logo.src = theme === 'dark' ? './assets/logo-dark.svg' : './assets/logo.svg';
   }
   const lightButton = document.querySelector('.theme-switch-light');
   const darkButton = document.querySelector('.theme-switch-dark');
