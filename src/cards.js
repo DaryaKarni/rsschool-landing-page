@@ -1,7 +1,7 @@
 
 async function loadData(){
   try{
-    const response = await fetch('../data.json');
+    const response = await fetch('./data.json');
     const data = await response.json();
     return data;
   } catch{
@@ -16,7 +16,7 @@ function renderCards(arr){
   arr.forEach((el, index) => {
     const card = document.createElement('div');
     card.classList.add('card');
-    const imageSrc = `../assets/coffee-${index + 1}.png`;
+    const imageSrc = `./assets/coffee-${index + 1}.png`;
     card.innerHTML = `
       <img class="card-image" src=${imageSrc} alt='item photo'>
       <div class="card-description">
