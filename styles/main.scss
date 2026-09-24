@@ -48,6 +48,13 @@ body{
       *{
         white-space: nowrap;
       }
+      .nav-item{
+        border-bottom: 0.16rem solid transparent;
+        transition: border-color 0.3s ease;
+        &:hover{
+          border-color: var(--text-primary);
+        }
+      }
     }
   }
   .header-actions{
@@ -113,7 +120,7 @@ body{
       }
       @media (hover: hover) {
         &:hover{
-          border-color: var(--text-primary);;
+          border-color: var(--text-primary);
         }
       }
       &.active{
@@ -682,6 +689,10 @@ body{
     .menu{
       .round-button{
         display: flex;
+      }
+
+      .menu-grid > *:nth-child(n+5) {
+        display: none;
       }
     }
   }

@@ -153,6 +153,13 @@ body {
 .header .header-nav .nav-list * {
   white-space: nowrap;
 }
+.header .header-nav .nav-list .nav-item {
+  border-bottom: 0.16rem solid transparent;
+  transition: border-color 0.3s ease;
+}
+.header .header-nav .nav-list .nav-item:hover {
+  border-color: var(--text-primary);
+}
 .header .header-actions {
   display: flex;
   gap: 1.5rem;
@@ -767,6 +774,9 @@ body {
   }
   .main-menu .menu .round-button {
     display: flex;
+  }
+  .main-menu .menu .menu-grid > *:nth-child(n+5) {
+    display: none;
   }
   .footer {
     padding: 3rem;
