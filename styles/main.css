@@ -597,6 +597,7 @@ body {
   flex-direction: column;
   border-radius: 2.5rem;
   border: 0.06rem solid var(--border-primary);
+  transition: transform 0.3s ease;
 }
 .main-menu .menu .menu-grid .card h3, .main-menu .menu .menu-grid .card p {
   color: var(--text-primary);
@@ -609,6 +610,9 @@ body {
   flex-direction: column;
   gap: 0.75rem;
   padding: 1.25rem;
+}
+.main-menu .menu .menu-grid .card:hover {
+  transform: translateY(-15px);
 }
 @media (hover: hover) {
   .main-menu .menu .menu-grid .card:hover {
