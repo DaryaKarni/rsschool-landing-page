@@ -39,10 +39,11 @@ body{
   .header-nav{
     width: 100%;
     .nav-list{
+      position: relative;
       display: flex;
       width: 100%;
       list-style: none;
-      gap: 5vw;
+      gap: 4vw;
       padding: 0;
       justify-content: center;
       *{
@@ -51,8 +52,10 @@ body{
       .nav-item{
         border-bottom: 0.16rem solid transparent;
         transition: border-color 0.3s ease;
-        &:hover{
-          border-color: var(--text-primary);
+        @media (hover: hover) {
+          &:hover{
+            border-color: var(--text-primary);
+          }
         }
       }
     }
@@ -130,6 +133,7 @@ body{
     .burger-menu{
       border: 0.06rem solid var(--border-inverse);
       color: var(--border-inverse);
+      background-color: transparent;
       border-radius: 6.25rem;
       width: 2.5rem;
       height: 2.5rem;
@@ -137,10 +141,31 @@ body{
       display: none;
       justify-content: center;
       align-items: center;
-      *{
-        color: var(--text-primary);
+      flex-direction: column;
+      gap: 0.3rem;
+      .line{
+        background-color: var(--text-primary);
         width: 1rem;
-        height: 1rem;
+        height: 0.06rem;
+        transition: transform 0.3s ease;
+        transform-origin: center center;
+      }
+      @media(hover:hover){
+        &:hover{
+          background-color: var(--background-container);
+          .line{
+            background-color: var(--text-inverse);
+          }
+        }
+      }
+      &.close{
+        gap: 0rem;
+        .up-line{
+          transform: rotate(45deg);
+        }
+        .down-line{
+          transform: rotate(-45deg);
+        }
       }
     }
   }
@@ -153,6 +178,63 @@ body{
   padding: 0 2.5rem 0 2.5rem;
   gap: 6.25rem;
   width: 100%;
+  .burger-menu-modal{
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    .nav-list{
+      margin-top: 20vh; 
+      position: relative;
+      display: flex;
+      width: 100%;
+      list-style: none;
+      gap: 4vw;
+      padding: 0;
+      align-items: center;
+      flex-direction: column;
+      *{
+        white-space: nowrap;
+        font-size: 2rem;
+      }
+      .nav-item{
+        border-bottom: 0.16rem solid transparent;
+        transition: border-color 0.3s ease;
+        @media (hover: hover) {
+          &:hover{
+            border-color: var(--text-primary);
+          }
+        }
+      }
+    }
+    .coffee-menu{
+      margin-top: clamp(0.2rem, 2vw, 2rem);
+      margin-left: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 0.16rem solid transparent;
+      transition: border-color 0.3s ease;
+      font-size: 2rem;
+      &-text{
+        color: var(--text-primary);
+      }
+      &-icon{
+        width: 2rem;
+        margin-bottom: 3px;
+        color: var(--text-primary);
+      }
+      @media (hover: hover) {
+        &:hover{
+          border-color: var(--text-primary);
+        }
+      }
+      &.active{
+        border-bottom: 1px solid var(--text-primary);
+      }
+    }
+  }
   #hero{
     width: 100%;
     max-height: 40.25rem;
@@ -620,7 +702,28 @@ body{
 .hidden{
   display: none;
 }
-
+//  .header-nav{
+//     width: 100%;
+//     .nav-list{
+//       position: relative;
+//       display: flex;
+//       width: 100%;
+//       list-style: none;
+//       gap: 4vw;
+//       padding: 0;
+//       justify-content: center;
+//       *{
+//         white-space: nowrap;
+//       }
+//       .nav-item{
+//         border-bottom: 0.16rem solid transparent;
+//         transition: border-color 0.3s ease;
+//         &:hover{
+//           border-color: var(--text-primary);
+//         }
+//       }
+//     }
+//   }
 @media(max-width: 768px){
   .heading-1{
     font-size: 60px;
@@ -653,6 +756,12 @@ body{
   }
   .main-home{
     padding: 0 1rem;
+    .burger-menu-modal{
+      display: flex;
+      &.hidden{
+        display: none;
+      }
+    }
     #hero{
       padding: 6.25rem 3.75rem;
       .hero-offer{

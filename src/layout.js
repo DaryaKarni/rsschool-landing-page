@@ -50,10 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>
           </button>
           <button class="burger-menu hidden">  
-            <svg width="18" height="10" aria-hidden="true" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.75 0.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M0.75 8.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <div class="up-line line"></div>
+            <div class="down-line line"></div>
           </button>
         </div>
       </header>
