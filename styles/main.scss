@@ -961,14 +961,23 @@ body{
     }
   }
   .main-menu{
-    .menu{
-      // .round-button{
-      //   display: flex;
-      // }
-
-      // .menu-grid > *:nth-child(n+5) {
-      //   display: none;
-      // }
+    .card-modal-wrapper{
+      .card-modal{
+        min-width: 90vw;
+        .modal-inner{
+          .image-wrapper{
+            width: 40vw;
+            height: 40vw;
+          }
+          .description-wrapper{
+            .size-wrapper{
+              .size-buttons{
+                flex-wrap: wrap;
+              }
+            }
+          }
+        }
+      }
     }
   }
   .footer{
@@ -1020,6 +1029,22 @@ body{
   }
   .main-menu{
     padding: 0 2rem;
+    .card-modal-wrapper{
+      .card-modal{
+        .modal-inner{
+          .image-wrapper{
+            display: none;
+          }
+          .description-wrapper{
+            .size-wrapper{
+              .size-buttons{
+                flex-wrap: wrap;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .footer{
     margin: 20px;

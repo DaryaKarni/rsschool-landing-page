@@ -1027,6 +1027,16 @@ body {
     min-width: 10rem;
     max-height: rem;
   }
+  .main-menu .card-modal-wrapper .card-modal {
+    min-width: 90vw;
+  }
+  .main-menu .card-modal-wrapper .card-modal .modal-inner .image-wrapper {
+    width: 40vw;
+    height: 40vw;
+  }
+  .main-menu .card-modal-wrapper .card-modal .modal-inner .description-wrapper .size-wrapper .size-buttons {
+    flex-wrap: wrap;
+  }
   .footer {
     padding: 3rem;
   }
@@ -1063,6 +1073,12 @@ body {
   }
   .main-menu {
     padding: 0 2rem;
+  }
+  .main-menu .card-modal-wrapper .card-modal .modal-inner .image-wrapper {
+    display: none;
+  }
+  .main-menu .card-modal-wrapper .card-modal .modal-inner .description-wrapper .size-wrapper .size-buttons {
+    flex-wrap: wrap;
   }
   .footer {
     margin: 20px;
