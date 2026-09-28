@@ -734,7 +734,7 @@ body {
   width: 2.5rem;
   height: 2.5rem;
   box-sizing: border-box;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -742,6 +742,10 @@ body {
   color: var(--text-primary);
   width: 1rem;
   height: 1rem;
+}
+.main-menu .menu .round-button.hidden {
+  display: none;
+  pointer-events: none;
 }
 
 .footer {
@@ -893,12 +897,6 @@ body {
     max-height: 30rem;
     min-width: 10rem;
     max-height: rem;
-  }
-  .main-menu .menu .round-button {
-    display: flex;
-  }
-  .main-menu .menu .menu-grid > *:nth-child(n+5) {
-    display: none;
   }
   .footer {
     padding: 3rem;

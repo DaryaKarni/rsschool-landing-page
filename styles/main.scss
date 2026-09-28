@@ -633,13 +633,17 @@ body{
       width: 2.5rem;
       height: 2.5rem;
       box-sizing: border-box;
-      display: none;
+      display: flex;
       justify-content: center;
       align-items: center;
       *{
         color: var(--text-primary);
         width: 1rem;
         height: 1rem;
+      }
+      &.hidden{
+        display: none ;
+        pointer-events: none;
       }
     }
   }
@@ -831,13 +835,13 @@ body{
   }
   .main-menu{
     .menu{
-      .round-button{
-        display: flex;
-      }
+      // .round-button{
+      //   display: flex;
+      // }
 
-      .menu-grid > *:nth-child(n+5) {
-        display: none;
-      }
+      // .menu-grid > *:nth-child(n+5) {
+      //   display: none;
+      // }
     }
   }
   .footer{
