@@ -1,4 +1,21 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+  //menu
+  const menuTabs = document.querySelector('.menu-tabs');
+  if(menuTabs){
+    menuTabs.addEventListener('click', async function(e){
+      const tab = e.target.closest('.tab-item');
+      if(!tab) return;
+      for(const tab of menuTabs.children){
+        tab.classList.remove('active');
+      }
+      tab.classList.add('active'); 
+      const category = tab.dataset.category;
+      await renderCards(category);
+    })
+  }
+});
+
 async function loadData(){
   try{
     const response = await fetch('./data.json');
@@ -9,16 +26,19 @@ async function loadData(){
     return 0;
   }
 } 
-const dataArr = await loadData();
-const coffeeArr = dataArr.slice(0,8);
-function renderCards(arr){
+
+async function renderCards(category){
+  const dataArr = await loadData();
   const grid = document.querySelector('.menu-grid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  const arr = dataArr.filter(item => item.category === category);
   arr.forEach((el, index) => {
     const card = document.createElement('div');
     card.classList.add('card');
-    const imageSrc = `./assets/coffee-${index + 1}.png`;
+    const imageSrc = `./assets/${category}-${index + 1}.png`;
     card.innerHTML = `
-      <img class="card-image" src=${imageSrc} alt='item photo'>
+      <img class="card-image" src=${imageSrc} alt='item ${category} photo'>
       <div class="card-description">
         <h3 class="heading-3">${el.name}</h3>
         <p class="medium">${el.description}</p>
@@ -28,4 +48,7 @@ function renderCards(arr){
     grid.append(card);
   })
 }
-renderCards(coffeeArr);
+renderCards('coffee');
+
+
+ 
