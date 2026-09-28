@@ -99,4 +99,27 @@ document.addEventListener('DOMContentLoaded', () => {
     moveTo(currentIndex - 1);
   });
   }
+
+let touchStartX = 0;
+let touchEndX = 0;
+const swipeThreshold = 50; 
+
+rowSlider.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].clientX;
+}, { passive: true });
+
+rowSlider.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+  if (swipeDistance < -swipeThreshold) {
+    moveTo(currentIndex + 1);
+  }
+  if (swipeDistance > swipeThreshold) {
+    moveTo(currentIndex - 1);
+  }
+}
 });
