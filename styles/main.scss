@@ -35,6 +35,8 @@ body{
     .logo{
       display: block;
       min-width: 6rem;
+      position: relative;
+      z-index: 2000;
       img{
         width: 100%;
       }
@@ -78,6 +80,8 @@ body{
         align-items: center;
         gap: 0.5rem;
         padding: 3px;
+        position: relative;
+        z-index: 2000;
         .switch-button{
           border-radius: inherit;
           width: 2.25rem;
@@ -186,12 +190,11 @@ body{
     width: 100vw;
     height: 100vh;
     align-items: center;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.4, 1), 
-              opacity 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
     background-color: var(--background-page);
     transform: translateY(0);
     &.hidden{
-        display: none;
+        opacity: 0;
         transform: translateY(-150%);
         pointer-events: none;
       }
@@ -692,6 +695,7 @@ body{
             padding: 0.5rem 1rem 0.5rem 0.5rem;
             justify-content: center;
             transition: all 0.3s ease;
+            background-color: transparent;
             .tab-round{
               width: 1.9rem;
               height: 1.9rem;
@@ -701,6 +705,7 @@ body{
               display: flex;
               align-items: center;
               justify-content: center;
+    
               .tab-text{
                 color: var(--text-primary);
               }
@@ -709,10 +714,10 @@ body{
               color: var(--text-primary)
             }
             &.active{
-              background-color: var(--background-container);
+              background-color: var(--modal-control);
               color: var(--text-inverse);
               .tab-round{
-                background-color: var(--background-page);
+                background-color: var(--modal-inner-control);
               }
               p{
                 color: var(--text-inverse);
@@ -941,6 +946,15 @@ body{
             &.variant-2{
               display: none;
             }
+          }
+        }
+      }
+    }
+    #favorite{
+      .slider-wrapper{
+        .slider{
+          .slider-button{
+            display: none;
           }
         }
       }

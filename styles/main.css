@@ -79,6 +79,8 @@
   --background-overlay: rgb(64, 63, 61, 0.8);
   --border-primary: #C1B6AD;
   --border-inverse: #665F55;
+  --modal-control: #665F55;
+  --modal-inner-control: #E1D4C9;
 }
 
 [data-theme=dark] {
@@ -91,6 +93,8 @@
   --background-overlay: rgba(41, 40, 38, 0.8);
   --border-primary: #665F55;
   --border-inverse: #C1B6AD;
+  --modal-control: #292826;
+  --modal-inner-control: #403F3D;
 }
 
 button {
@@ -146,6 +150,8 @@ body {
 .header-wrapper .header .logo {
   display: block;
   min-width: 6rem;
+  position: relative;
+  z-index: 2000;
 }
 .header-wrapper .header .logo img {
   width: 100%;
@@ -190,6 +196,8 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 3px;
+  position: relative;
+  z-index: 2000;
 }
 .header-wrapper .header .header-actions .theme-switch .switch-button {
   border-radius: inherit;
@@ -294,12 +302,12 @@ body {
   width: 100vw;
   height: 100vh;
   align-items: center;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.4, 1), opacity 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   background-color: var(--background-page);
   transform: translateY(0);
 }
 .header-wrapper .burger-menu-modal.hidden {
-  display: none;
+  opacity: 0;
   transform: translateY(-150%);
   pointer-events: none;
 }
@@ -798,6 +806,7 @@ body {
   padding: 0.5rem 1rem 0.5rem 0.5rem;
   justify-content: center;
   transition: all 0.3s ease;
+  background-color: transparent;
 }
 .main-menu .card-modal-wrapper .card-modal .modal-inner .description-wrapper .tap-button .tab-round {
   width: 1.9rem;
@@ -816,11 +825,11 @@ body {
   color: var(--text-primary);
 }
 .main-menu .card-modal-wrapper .card-modal .modal-inner .description-wrapper .tap-button.active {
-  background-color: var(--background-container);
+  background-color: var(--modal-control);
   color: var(--text-inverse);
 }
 .main-menu .card-modal-wrapper .card-modal .modal-inner .description-wrapper .tap-button.active .tab-round {
-  background-color: var(--background-page);
+  background-color: var(--modal-inner-control);
 }
 .main-menu .card-modal-wrapper .card-modal .modal-inner .description-wrapper .tap-button.active p {
   color: var(--text-inverse);
@@ -1013,6 +1022,9 @@ body {
     flex-direction: row;
   }
   .main-home #about .about-images .column .about-image.variant-2 {
+    display: none;
+  }
+  .main-home #favorite .slider-wrapper .slider .slider-button {
     display: none;
   }
   .main-home #mobile {
