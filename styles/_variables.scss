@@ -66,20 +66,26 @@
   --text-inverse: #E1D4C9;
   --text-accent: #B0907A;
   --background-page: #E1D4C9;
+  --background-body: #E1D4C9;
   --background-container: #665F55;
   --background-overlay: rgb(64, 63, 61, 0.8);
   --border-primary: #C1B6AD;
   --border-inverse: #665F55;
+  --modal-control: #665F55;
+  --modal-inner-control: #E1D4C9;
 }
 [data-theme="dark"]{
   --text-primary: #E1D4C9;
   --text-inverse: #E1D4C9;
   --text-accent: #B0907A;
   --background-page: #292826;
+  --background-body: #403F3D;
   --background-container: #403F3D;
   --background-overlay: rgba(41, 40, 38, 0.8);
   --border-primary: #665F55;
   --border-inverse: #C1B6AD;
+  --modal-control: #292826;
+  --modal-inner-control: #403F3D;
 }
 button{
   all: unset;
@@ -87,4 +93,7 @@ button{
 }
 p, span, h1, h2, h3{
   margin: 0;
+}
+.no-scroll {
+  overflow: hidden;
 }

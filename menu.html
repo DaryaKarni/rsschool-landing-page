@@ -20,21 +20,21 @@
         </h1>
         <div class="menu-tabs">
 
-          <button class="tab-item active">
+          <button data-category="coffee" class="tab-item active">
             <span class="icon-frame">
               ☕
             </span>
             <span class="button">Coffee</span>
           </button>
 
-          <button class="tab-item">
+          <button data-category="tea" class="tab-item">
             <span class="icon-frame">
               🫖
             </span>
             <span class="button">Tea</span>
           </button>
 
-          <button class="tab-item">
+          <button data-category="dessert" class="tab-item">
             <span class="icon-frame">
              🍰
             </span>
@@ -52,6 +52,11 @@
         </svg>
       </div>
     </div>
+    <div class="card-modal-wrapper hidden">
+      <div class="card-modal">
+
+      </div>
+    </div>
   </main>
   <div class="footer-wrapper">
     <!-- here will be footer -->
@@ -59,5 +64,6 @@
 <script type="module" src="./src/layout.js"></script>
 <script type="module" src="./src/cards.js"></script>
 <script type="module" src="./src/theme.js"></script>
+<script type="module" src="./src/burger.js"></script>
 </body>
 </html>
